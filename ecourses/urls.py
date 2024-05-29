@@ -19,6 +19,6 @@ from django.urls import path,include,re_path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('courses/', include('courses.urls')),
+    path('', include('courses.urls')),
     re_path(r'^ckeditor/', include('ckeditor_uploader.urls')) # re : bieu thuc chinh quy
 ]

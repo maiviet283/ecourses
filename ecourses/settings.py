@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles', # ho tro tai nguyen tinh , css, js
     'ckeditor', # editro
-    'ckeditor_uploader', #upload
+    'ckeditor_uploader',
+    'rest_framework'
 ]
 
 # xu ly cac yeu cau truoc khi du lieu chay vao server
@@ -131,3 +132,8 @@ CKEDITOR_UPLOAD_PATH = 'lessons/'
 # https://docs.djangoproject.com/en/5.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS':'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': '2'
+}
